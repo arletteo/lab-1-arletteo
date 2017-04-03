@@ -3,6 +3,9 @@
 #* Section 2 (Data Definitions)
 
 #* 1)
+def convert(celcius):
+    farenheit = (celcius *(9/5)) + 32
+    return farenheit
 
 #* 2)
 
