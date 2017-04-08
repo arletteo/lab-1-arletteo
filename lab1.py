@@ -48,30 +48,81 @@ def add_tax(price):
 #* 2)
 #takes the name of an item and returns the price of the item 
 # string list --> float
-def find_item_price(item_name, store_database)
+def find_item_price(item_name, store_database):
     for item in store_database:
         if item_name == item.name:
            return item.price
 
 #* 3)
-
+#takes a region and calculates the average income of the region
+#string list --> int 
+def med_income(geo_region, database):
+    pass 
+    
 #* 4)
+#takes a region and returns a list of cities that overlap with the region
+#string list --> list 
+def overlaping_cities(region, database): 
+    pass 
 
 #* Section 4 (Test Cases)
 
 #* 1)
+import unittest
+
+class TestCases (unittest):
+      def test_1(self):
+          self.assertEqual(second_largest(1,2,3), 2)
+      def test_2(self):
+          self.assertEqual(second_largest(2,2,2),2)
+          
+if __name__ == '__main__':
+   unittest.main()
 
 #* 2)
+import unittest 
+
+class TestCases(unittest):
+      def test_1(self):
+          self.assertTrue(no_capitals('blah'))
+      def test_2(self):
+          self.assertFalse(no_capitals('Fajnfej'))
+if __name__ == '__main__':
+   unittest.main()
 
 #* 3)
+import unittest
+
+class TestCases(unittest):
+      def test_1(self):
+          self.assertEqual(northernmost('San Diego', 'Los Angeles'), 'Los Angeles')
+      def test_2(self):
+          self.assertEqual(northernmost('Tijuana', 'San Diego'), 'San Diego')
+if __name__ == '__main__':
+   unittest.main()
+
 
 #* Section 5 (Whole Functions)
 
 #* 1)
+#takes a measurment in feet and returns the measurement in meters
+#float --> float
+def feet_to_meters(length):
+    return length*0.3048
 
 #* 2)
+class MusicalNote:
+    def __init__(self, frequency, duration):
+         self.frequency = frequency
+         self.duration = duration 
+    def __repr__(self):
+        return (('Frequency: %r Duration: %r) %(self.frequency, self.duration))
+          
 
 #* 3)
+def up_an_octave(note):
+    
+    
 
 #* 4)
 
