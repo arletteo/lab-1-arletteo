@@ -46,8 +46,12 @@ def add_tax(price):
     return price + tax
 
 #* 2)
-def find_item_price(item, database)
-    pass
+#takes the name of an item and returns the price of the item 
+# string list --> float
+def find_item_price(item_name, store_database)
+    for item in store_database:
+        if item_name == item.name:
+           return item.price
 
 #* 3)
 
