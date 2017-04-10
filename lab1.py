@@ -162,4 +162,4 @@ class TestCases5(unittest.TestCase)
    def test_up_one_octave_m1(self):
       note = Note(440,5)
       self.assertEqual(up_one_octave_m(note), None)
-      self.assertEqual(note.frequency, 440)
+      self.assertEqual(note.frequency, 440) 
