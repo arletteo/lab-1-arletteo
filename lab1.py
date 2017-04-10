@@ -156,10 +156,10 @@ if __name__ == '__main__':
 #takes a musical note and doubles its frequency
 #MusicalNote --> None
 def up_one_octave_m(note):
-    note = (note.frequency*2, note.duration)
+    note.frequency = note.frequency*2
     return None
 class TestCases5(unittest.TestCase)
    def test_up_one_octave_m1(self):
       note = Note(440,5)
       self.assertEqual(up_one_octave_m(note), None)
-      self.assertEqual(note.pitch, 440)
+      self.assertEqual(note.frequency, 440)
