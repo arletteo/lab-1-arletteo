@@ -68,6 +68,9 @@ def overlaping_cities(region, database):
 #* Section 4 (Test Cases)
 
 #* 1)
+def second_largest(num1, num2, num3):
+    pass
+  
 import unittest
 
 class TestCases (unittest):
@@ -80,6 +83,8 @@ if __name__ == '__main__':
    unittest.main()
 
 #* 2)
+def no_capitals(sring):
+    pass 
 import unittest 
 
 class TestCases(unittest):
@@ -91,6 +96,9 @@ if __name__ == '__main__':
    unittest.main()
 
 #* 3)
+def northernmost(city1, city2):
+    pass
+  
 import unittest
 
 class TestCases2(unittest):
