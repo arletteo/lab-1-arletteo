@@ -20,9 +20,9 @@ class PriceRecord:
           self.name = name #a Name
           self.price = price # a Price
       def __repr__(self):
-          return ("Item name: %r Item Price: %r" %(self.name, self.price))
+          return "Item name: %r Item Price: %r" %(self.name, self.price)
       def __eq__(self, other):
-          return self.name = other.name and self.price = other.price
+          return type(other) == PriceRecord and self.name == other.name and self.price == other.price
 #* 4)
 #a Tab is an object that contains information about an open tab
 #a URL is a string representing the URL of the website open in a a tab 
@@ -32,9 +32,9 @@ class Tabs:
           self.url = url #a URL
           self.date = date #a Date
       def __repr__(self):
-          return ('Tab URL: %r Most recently visited on %r' %(url, date))
+          return 'Tab URL: %r Most recently visited on %r' %(url, date)
       def __eq__(self, other):
-          return self.url = other.url and self.date = other.date
+          return type(other) == Tabs and self.url == other.url and self.date == other.date
 
 #* Section 3 (Signature, Purpose Statements, Headers)
 
@@ -107,22 +107,33 @@ if __name__ == '__main__':
 #* 1)
 #takes a measurment in feet and returns the measurement in meters
 #float --> float
-def feet_to_meters(length):
+def f2m(length):
     return length*0.3048
 
 #* 2)
+# MusicalNote represents a music note's pitch and duration in seconds
+#a Frequency represents the frequency of a note in Hertz
+#a Duration is the duration of the note in seconds
 class MusicalNote:
     def __init__(self, frequency, duration):
-         self.frequency = frequency
-         self.duration = duration 
+         self.frequency = frequency #a Frequency
+         self.duration = duration #a Duration
     def __repr__(self):
         return (('Frequency: %r Duration: %r) %(self.frequency, self.duration))
-          
+    def __eq__(self, other):
+        return type(other)== MusicalNote and self.frequency == other.frequency and self.duration == other.duration
 
 #* 3)
-def up_an_octave(note):
-    
+#returns a note with ouble the frequency as the one input
+# MusicalNote --> MusicalNote
+def up_one_octave(note):
+    return MusicalNote(note.frequency*2, note.duration)
     
 
 #* 4)
+#takes a musical note and doubles its frequency
+#MusicalNote --> None
+def up_one_octave_m(note):
+    note = (note.frequency*2, note.duration)
+    return None
 
