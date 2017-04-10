@@ -93,7 +93,7 @@ if __name__ == '__main__':
 #* 3)
 import unittest
 
-class TestCases(unittest):
+class TestCases2(unittest):
       def test_1(self):
           self.assertEqual(northernmost('San Diego', 'Los Angeles'), 'Los Angeles')
       def test_2(self):
@@ -110,6 +110,13 @@ if __name__ == '__main__':
 def f2m(length):
     return length*0.3048
 
+class TestCases3(unittest.TestCase):
+   def test_f2m1(self):
+      self.assertAlmostEqual(f2m(12), 3.657, 2)
+   def test_f2m2(self):
+      self.assertAlmostEqual(f2m(15), 4.572, 2)
+if __name__ == '__main__':
+   unittest.main()
 #* 2)
 # MusicalNote represents a music note's pitch and duration in seconds
 #a Frequency represents the frequency of a note in Hertz
@@ -128,7 +135,14 @@ class MusicalNote:
 # MusicalNote --> MusicalNote
 def up_one_octave(note):
     return MusicalNote(note.frequency*2, note.duration)
-    
+
+class TestCases4(unittest.TestCase):
+      def test_up_one_octave1(self):
+          self.assertEqual(up_one_octave(Note(440, 5)), Note(880, 5))
+      def test_up_one_octave2(self):
+          self.assertEqual(up_one_octave(Note(460, 5)), Note(920, 5))
+if __name__ == '__main__':
+   unittest.main()
 
 #* 4)
 #takes a musical note and doubles its frequency
@@ -136,4 +150,8 @@ def up_one_octave(note):
 def up_one_octave_m(note):
     note = (note.frequency*2, note.duration)
     return None
-
+class TestCases5(unittest.TestCase)
+   def test_up_one_octave_m1(self):
+      note = Note(440,5)
+      self.assertEqual(up_one_octave_m(note), None)
+      self.assertEqual(note.pitch, 440)
